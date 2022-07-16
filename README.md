@@ -14,54 +14,26 @@ This documentation includes:
 
 ----
 ## Project Requirements
-The goal of analysing this data is to get insights that answers some important questions about airplane crashes between 1908 and 2009 which are:
-1. What is the total number of crashes within the given period?
-2. What is total number of people on board while the plane crashed?
-3. What is the total number of fatalities and survivors?
-4. Whats is the trend of fatalities and survivors over the period?
-5. What are the major causes of airplane crashes?
-6. Which year did the most crashes occur?
-7. Countries where most crashes occured.
-8. Month with the occurrence of most crashes.
+The goal of analysing this data is to get insights about airlines delays:
+1. The total number of times that there has been flight delays
+2. The proportion of delayed and undelayed flights
+3. Day of the week with the highest flight delays.
+4. Airline with the highest number of delays.
+5. Airport from which flights were delayed the most
 
 ----
 ## Data Sourcing
-Data used for analysis was scrapped from [this](https://github.com/theoyinbooke/30Days-of-Learning-Data-Analysis-Using-Power-BI-for-Students) Github repository. The data was originally gotten from [Kaggle](https://www.kaggle.com/datasets/saurograndi/airplane-crashes-since-1908).
+Data used for analysis was scrapped from [Kaggle](https://www.kaggle.com/datasets/jimschacko/airlines-dataset-to-predict-a-delay) and cam=n also be found in [this](https://github.com/theoyinbooke/30Days-of-Learning-Data-Analysis-Using-Power-BI-for-Students) Github repository.
 
 ----
 ## Data Cleaning
-The data had 13 columns which are: 
-- Date
-- Time
-- Location
-- Operator
-- Flight #
-- Route
-- Type
-- Registration
-- cn/In
-- Aboard
-- Fatalities
-- Ground
-- Summary
-
-Some of these columns were removed during the cleaning process because they had more empty rows than non-empty rows and their removal will not have any effect on the analysis. The removed columns are:
-- Time
-- Flight #
-- Route
-- cn/In
-
-Empty rows in other columns were appropriately dealt with by replacing those of numerical data type with 0 and those of text data with Unknown.
-An index column was added in order to make counting of the total number of crashes easier.
-Year and Month columns were also added by extracting them from the date column.
-Also, a country column was added by extracting the country name from the location column. Here a problem was encountered: locations in the United States had the name of the states rather than the country name. This was solved by writing some lines of M code to bulk-replace the name of the states with United States of America.
-Finally, a Reason column was added by looking for specific words in the Summary column to categorize the reasons into Weather, Shot Down, Fire, Obstacle, Engine Failure, Pilot Error and Explosion.
-
+The data was relatively cleaned from source but some modifications were made to some of the columns:
+- The DayOfWeek column contained numbers of the days of the week. I used the replace value feature to replace the number with their respective names.
+- The Delay column contained numerical values (0 and 1). I changed it to text data by replacing 0 with "Not delayed" and 1 with "Delayed"
 ----
 ## Findings
 Analysis and visualization was done with Microsoft Power BI and the following insights were derived:
-- Total number of crashes between 1908 and 2009 is 5,236.
-- Total number of passengers aboard is above 140,000 and total number of fatalities is above 105,000. The fatality rate is 72.87%
+- The total number of delayed flights is above 260,000. This represents about 44.56% of the total number of flights.
 - Weather is the major cause of plane crash, which accounts for more than 1,600 of the total crashes.
 - 1972 is the year with the highest amount of crashes (104). This is also the year with the highest fatalities.
 - The top three countries where crashes occur are USA, Brazil and Russia respectively.

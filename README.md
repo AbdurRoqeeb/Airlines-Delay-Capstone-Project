@@ -34,18 +34,16 @@ The data was relatively cleaned from source but some modifications were made to 
 ## Findings
 Analysis and visualization was done with Microsoft Power BI and the following insights were derived:
 - The total number of delayed flights is above 260,000. This represents about 44.56% of the total number of flights.
-- Weather is the major cause of plane crash, which accounts for more than 1,600 of the total crashes.
-- 1972 is the year with the highest amount of crashes (104). This is also the year with the highest fatalities.
-- The top three countries where crashes occur are USA, Brazil and Russia respectively.
-- Most crashes occur in December, closely followed by January and August.
-- Aeroflot is the operator that has experienced crashes the most, closely followed by the US Air Force.
+- Most flight delays occurred on Tuesday, Wednesday and Thursday, in that order.
+- The airline with the highest number of delays is WN (SouthWest Airlines).
+- The airline with the highest average delay time is FL (Florida Air Cargo).
+- ATL (Hartsfield-Jackson Atlanta International Airport - Georgia) is the airport from whch flights get delayed most.
 
 ----
 ## Reccommendations
-1. Weather forecast should be properly done before flights take off.
-2. Special attention should be given to countries where most crashes has occured in order to reduce further occurrences.
-3. Airline operators should make necessary checks to ensure the plane is in good shape so as to prevent crashes due to engine failure.
+1. WN (SouthWest Airlines) should put in measures to reduce flight delaysby their airlines
+2. A deeper investigation should be done to know what causes the increased number of flight delays on Tuesday, Wednesday and Thursday.
 
 ----
 ## Limitations
-Although the Summary column provided some information about the reason for some crashes, it is not sufficient for some others.
+The period of time for the collection of the dataset was not available. This made it difficult to connect this dataset to other datasets such as weather information over a specific period of time which could help in further investigating the reasons for flight delays.
